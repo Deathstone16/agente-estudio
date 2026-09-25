@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Recibir la materia, el parcial, el programa, las indicaciones de la cátedra, bibliografía, apuntes y transcripciones; producir un resumen trazable y una práctica de estudio adaptada al examen. Conservar los resultados en Obsidian cuando el vault y su forma de escritura estén definidos.
+Recibir la materia, la tarea académica, el programa, las indicaciones de la cátedra, bibliografía, apuntes y transcripciones; producir notas trazables y práctica adaptada al examen. Conservar los resultados en el vault IEN respetando la estructura real de cada materia.
 
 El sistema debe poder contestar dos preguntas distintas: «¿está cubierto todo el temario conocido de este parcial?» y «¿puedo recuperar y aplicar ese contenido sin mirar el resumen?».
 
@@ -28,12 +28,12 @@ Son ocho responsabilidades independientes, además del orquestador. Pueden traba
 | --- | --- | --- | --- |
 | 1 | **Extractor de fuentes** | Leer los archivos asignados, aplicar OCR o revisar transcripciones cuando haga falta y recuperar conceptos, ejemplos, ejercicios y anuncios. Se pueden iniciar varias instancias por lotes. | Fichas con fuente, página/minuto/sección, tema, contenido fiel y dudas de lectura. |
 | 2 | **Arquitecto del temario** | Cruzar programa, cronograma, avisos y clases para delimitar la instancia concreta. | Matriz de subtemas con `confirmado/probable/incierto/excluido`, justificación y huecos de material. |
-| 3 | **Analista disciplinar** | Reconstruir definiciones, relaciones, teorías, procedimientos, fórmulas, casos y contradicciones. | Esquema conceptual con dependencias, diferencias y profundidad necesaria. |
+| 3 | **Analista disciplinar y crítico** | Reconstruir definiciones, relaciones, teorías, procedimientos, fórmulas, casos, argumentos y contradicciones. | Esquema conceptual con dependencias, diferencias, evidencia y profundidad necesaria. |
 | 4 | **Analista de evaluación** | Estudiar modalidad, consignas, ejercicios y exámenes anteriores de esa cátedra para traducir el temario en capacidades evaluables. | Competencias por tema, tipos de preguntas plausibles y criterios de respuesta; sin probabilidades inventadas. |
-| 5 | **Diseñador de métodos de estudio** | Seleccionar y aplicar métodos dentro de cada apunte y del plan general; después adaptar el trabajo a las respuestas del estudiante. | Actividades concretas, preguntas y claves separadas, sesiones de estudio, rúbricas y registro de errores. |
+| 5 | **Diseñador de métodos y seguimiento** | Seleccionar métodos, planificar sesiones y adaptar el trabajo a respuestas y errores observados. | Actividades, claves separadas, diario, repasos, rúbricas y registro de errores. |
 | 6 | **Cartógrafo conceptual** | Crear mapas con relaciones etiquetadas y elegir entre Mermaid, Canvas y notas índice según el objetivo. | Diagrama validable, `.canvas` cuando corresponda, enlaces a notas reales y actividad para reconstruir el mapa sin mirar. |
 | 7 | **Editor de notas y Obsidian** | Escribir el resumen desarrollado y las actividades aprobadas; aplicar las skills de formato y, si existe, la política específica del vault para rutas, propiedades y enlaces. Es el único subagente que modifica notas finales. | Notas Markdown, índice del parcial, práctica, mapa y registro de pendientes. |
-| 8 | **Auditor independiente** | Leer borradores y mapas contra las fuentes originales y la matriz; revisar también soluciones, enlaces y adecuación de actividades al temario. | Hallazgos `respaldado/parcial/sin respaldo/contradicción`, cobertura por tema y correcciones accionables. |
+| 8 | **Auditor e investigador independiente** | Leer borradores y mapas contra fuentes originales; verificar soluciones, enlaces, ampliaciones externas y adecuación al temario. | Hallazgos `respaldado/parcial/sin respaldo/contradicción`, cobertura y correcciones accionables. |
 
 ## Flujo de una ejecución
 
@@ -90,6 +90,10 @@ Su trabajo comprende **seleccionar, aplicar y evaluar** métodos, no solo recome
 | `obsidian-bases` | Instalada de `kepano/obsidian-skills` | Crear vistas `.base` de notas y seguimiento cuando aporten valor. |
 | `find-skills` | Instalada de `vercel-labs/skills` | Buscar y evaluar nuevas skills al ampliar el sistema; no interviene en cada parcial. |
 | `skill-creator` | Local | Crear y mantener skills propias; no interviene en cada parcial. |
+| `escritura-vault-ien` | Local | Rutas, frontmatter, tags, preservación e índices del vault real. |
+| `pensamiento-critico-academico` | Local | Evaluación de argumentos, evidencia, supuestos y contradicciones. |
+| `investigacion-academica` | Local | Ampliaciones externas citadas y diferenciadas de la cátedra. |
+| `seguimiento-academico` | Local | Sesiones, errores, repasos y dashboards con datos observados. |
 
 Estas skills se instalaron **en el proyecto**, para que los agentes que trabajen desde esta carpeta tengan sus instrucciones. Las tres de Obsidian definen formatos; falta una política del vault concreto (ruta, estructura, nombres, plantillas y reglas de actualización). Cuando se conozca el vault, esa política puede convertirse en una skill local `escritura-vault-facultad`.
 
@@ -117,7 +121,7 @@ Las funciones de extracción y verificación son roles de subagente. Solo necesi
 | Lectura de PDF y documentos | Páginas, tablas y figuras; extracción visual cuando importe. | Skills de PDF y documentos disponibles en Codex. |
 | OCR y transcripción de audio | Imágenes o clases sin texto legible. | Añadir solo si los insumos lo requieren; marcar calidad y revisar términos críticos. |
 | Búsqueda web | Aclarar conceptos con fuentes académicas o primarias y documentar ampliaciones externas. | Disponible; nunca determina por sí misma el temario de la cátedra. |
-| Obsidian | Escribir Markdown, Mermaid, JSON Canvas y, si conviene, Bases; leer y editar el vault siguiendo su política específica. | Skills de formato instaladas. Falta definir ruta/acceso y convenciones del vault; MCP es opcional para un vault local. |
+| Obsidian | Escribir Markdown, Mermaid, JSON Canvas y, si conviene, Bases; leer y editar siguiendo la política específica de IEN. | Vault auditado; ruta y convenciones documentadas en `escritura-vault-ien`. |
 | Rúbrica y registro de respuestas | Puntuar prácticas por tema y registrar errores observados. | Puede empezar con Markdown o JSON local, sin base de datos externa. |
 
 La primera versión no requiere PostgreSQL, embeddings, vector DB ni un MCP de Obsidian. Se incorporan si el volumen de materiales o las consultas históricas muestran una necesidad concreta. Una búsqueda vectorial de fragmentos no basta para certificar cobertura total del programa.

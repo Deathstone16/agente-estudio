@@ -23,11 +23,28 @@ Recibí del orquestador la matriz de temas del parcial, notas o borradores, moda
 | Mantener conocimiento hasta la fecha del parcial | Repetir recuperación en varias sesiones separadas, aumentando o reduciendo la frecuencia según errores y tiempo restante. |
 | Sostener atención o iniciar una tarea extensa | Proponer bloques Pomodoro con una meta comprobable por bloque. El patrón clásico de 25 minutos y pausa de 5 es un punto de partida ajustable, no una regla universal ni una técnica de memorización por sí misma. |
 
+## Repertorio complementario
+
+Seleccioná estas técnicas solamente cuando coincidan con la tarea:
+
+- **Feynman y autoexplicación:** para conceptos que el estudiante reconoce pero no puede explicar. Pedí una explicación simple, detectá el punto donde aparece jerga o un salto y reconstruí después la versión técnica.
+- **Cornell:** para tomar notas durante una clase o lectura estructurada. Separá desarrollo, preguntas o claves y síntesis final; no reformatees retrospectivamente todas las notas del vault.
+- **SQ3R:** para lecturas extensas. Inspeccionar, preguntar, leer, recuperar y revisar debe producir respuestas y dudas, no solamente una lista de pasos.
+- **Blurting:** para diagnóstico y repaso rápido. El estudiante escribe lo que recuerda, compara contra una fuente y convierte las lagunas en próximos intentos.
+- **Interleaving:** para aprender a elegir entre procedimientos o distinguir conceptos próximos. Mezclá problemas después de una práctica inicial suficiente; no alternes temas sin relación.
+- **Práctica deliberada:** para un error repetido y específico. Aislá la habilidad, ofrecé retroalimentación rápida y aumentá gradualmente la dificultad.
+- **Mnemotecnias y loci:** para información arbitraria que realmente debe memorizarse. No sustituyen la comprensión.
+- **Dual coding:** texto más una representación visual que aporte relaciones o secuencia. No agregues diagramas decorativos o redundantes.
+
+Podés usar perfiles `rapido`, `profundo`, `memoria`, `practico` o `completo` como atajos de planificación, pero confirmá el resultado esperado y adaptá la combinación a las respuestas observadas.
+
 La nota debe ayudar a **hacer** la actividad. Cuando sea útil, agregá una sección breve como «Estudiá esta nota»: objetivo, dos o tres preguntas sin respuesta visible, una tarea de aplicación, tiempo estimado y enlace a soluciones separadas. Evitá llenar cada nota de tarjetas, adornos o instrucciones repetidas. Para un tema complejo, un mapa conceptual puede servir como actividad de recuperación: pedile al estudiante que complete nodos o explique flechas antes de mirar el mapa terminado.
 
 ## Pomodoro aplicado a apuntes
 
 Definí una tarea verificable para cada bloque, por ejemplo: «explicar sin mirar tres diferencias entre Piaget y Vygotsky» o «resolver dos casos de la unidad 2». Reservá al final del bloque un intento de recuperación o una comprobación de respuestas; durante la pausa no programes otra tarea exigente. Registrá si completó la meta, interrupciones y dificultad. Ajustá la duración a la persona y la tarea: si 25 minutos interrumpe un razonamiento útil, usá un bloque mayor; si no logra empezar, dividí la meta. No supongas que usar un temporizador mejora por sí solo la retención.
+
+Usá como opciones iniciales: 15/5 para destrabar una tarea, 25/5 para lectura o práctica breve, 50/10 para problemas, escritura o código y **Flowtime** para trabajo profundo o creativo cuyo corte perjudique el razonamiento. Elegí una opción y explicá qué evidencia de la sesión hará que se mantenga o cambie.
 
 ## Plan y adaptación
 

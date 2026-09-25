@@ -1,19 +1,42 @@
-# Agente de estudio para parciales
+# Superagente de estudio para el vault IEN
 
-Proyecto de instrucciones y skills para preparar resúmenes de parciales universitarios a partir del programa, bibliografía, apuntes y transcripciones de clase. El flujo controla la cobertura del temario, conserva referencias a las fuentes y agrega práctica de estudio y mapas para Obsidian.
+Sistema multiagente para preparar clases, parciales, finales y materias libres a partir del programa, bibliografía, apuntes, exámenes previos y transcripciones. Combina el control de alcance y evidencia del agente nuevo con los comandos, métodos, seguimiento y convenciones de Obsidian del agente anterior de IEN.
 
 ## Cómo está organizado
 
-- [`AGENTS.md`](AGENTS.md): instrucciones del orquestador y contratos de ocho subagentes.
+- [`AGENTS.md`](AGENTS.md): instrucciones del orquestador, lenguaje natural y contratos de ocho subagentes.
 - [`ARQUITECTURA-AGENTE-ESTUDIO.md`](ARQUITECTURA-AGENTE-ESTUDIO.md): diseño completo, dependencias entre roles, herramientas y criterios de aceptación.
-- [`.agents/skills/`](.agents/skills/): skills locales e instaladas para resúmenes, métodos de estudio, mapas conceptuales y formatos de Obsidian.
+- [`AUDITORIA-VAULT-IEN.md`](AUDITORIA-VAULT-IEN.md): comparación de ambos agentes y análisis cuantitativo de la estructura real del vault.
+- [`.agents/skills/`](.agents/skills/): skills para resúmenes, métodos, mapas, investigación, pensamiento crítico, seguimiento y escritura segura en IEN.
 - [`skills-lock.json`](skills-lock.json): origen y versión de las skills instaladas mediante Skills CLI.
+
+El vault conserva además sus carpetas por materia, `Plantillas`, `Dashboard`, `Diario`, `Mapas`, `Quizzes` y los plugins de Obsidian ya configurados. La estructura de cada materia se respeta tal como existe; el agente no fuerza una migración global.
 
 ## Uso
 
-Abrí esta carpeta como proyecto en un entorno compatible con `AGENTS.md`, skills y delegación de subagentes. Indicá la materia y el parcial, y proporcioná el programa, las instrucciones de alcance, el material de estudio y las transcripciones disponibles. La ubicación y las convenciones de tu vault de Obsidian se definen antes de escribir allí; mientras tanto, los materiales pueden prepararse en este proyecto.
+La instalación activa vive en `C:\Users\Bruno\Desktop\IEN`. Abrí ese vault como proyecto en Codex y pedí la tarea en lenguaje natural, por ejemplo: “preparame el segundo parcial de Testing”, “hoy cursé Base de Datos 2” o “haceme un repaso de Aplicaciones Móviles”. El agente inspeccionará primero la estructura y las notas existentes de la materia.
 
-Las skills establecen procedimientos y formatos. La ejecución multiagente depende de que el entorno permita crear subagentes con encargos separados. Los archivos de este repositorio no incluyen aún un examen real ni materiales de una materia.
+No se utiliza OpenCode. La configuración activa es:
+
+```text
+IEN/
+├── AGENTS.md
+├── .agents/skills/
+├── ARQUITECTURA-AGENTE-ESTUDIO.md
+├── AUDITORIA-VAULT-IEN.md
+└── skills-lock.json
+```
+
+Las skills establecen procedimientos y formatos. La ejecución multiagente depende de que el entorno permita crear subagentes con encargos separados. Si no está disponible, el orquestador conserva las etapas y controles sin simular agentes inexistentes.
+
+## Capacidades incorporadas
+
+- Resúmenes con matriz de alcance y cobertura verificable.
+- Investigación académica y análisis crítico diferenciados de la voz de la cátedra.
+- Recuperación activa, práctica distribuida, Feynman, Cornell, SQ3R, blurting, interleaving, Pomodoro y Flowtime.
+- Quizzes, flashcards, simulacros, mapas Mermaid/Canvas, MOC y práctica con respuestas separadas.
+- Diario, registro de errores, próximos repasos y dashboards basados en datos observados.
+- Política específica para las nueve materias y las estructuras heterogéneas del vault IEN.
 
 ## Skills de terceros
 
